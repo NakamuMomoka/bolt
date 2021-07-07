@@ -1,0 +1,272 @@
+@charset "UTF-8";
+
+body {
+  font-family: "Raleway", "Lato", sans-serif;
+  color: #333;
+}
+
+.inner {
+  margin: 0 auto;
+  width: 1100px;
+}
+
+/*---------------------------------------------------*/
+
+/*.header-inner:last-child{
+  justify-content: flex-end;
+}
+*/
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  background-color: #fff;
+}
+
+.header__icon {
+  padding: 15px 0;
+  color: #4e4e4e;
+  /*margin-right: 37.5%; (500pxの半分)225/600*100=37.5%(225px)*/
+}
+
+.header__contact-button {
+  display: inline-block;
+  font-size: 12px;
+  padding: 14px 12px;
+  background-color: #74cfae;
+  color: #fff;
+  text-decoration: none;
+  /*margin-left: 37.5%;*/
+}
+
+.header__contact-button:hover {
+  transition: 0.3s;
+  color: #333;
+}
+
+/*---------------------------------------------------*/
+
+.main-inner,
+.concept__inner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  background-color: #f2f2f2;
+}
+
+.theme__h1 {
+  margin-top: 250px;
+  color: #74cfae;
+  font-size: 90px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.theme__lead {
+  margin: 20px 0 250px;
+  color: #c0c0c0;
+  font-size: 30px;
+  text-align: center;
+}
+
+/*---------------------------------------------------*/
+
+.concept {
+  background-color: #74cfae;
+  color: #fff;
+  text-align: center;
+}
+
+.concept__section {
+  display: flex;
+  height: 345px;
+}
+
+.concept__img {
+  margin: 50px 0 0 100px;
+}
+
+.concept__h2 {
+  font-size: 24px;
+  margin-bottom: 35px;
+}
+
+.concept__lead {
+  font-size: 20px;
+  line-height: 30px;
+  width: 700px;
+}
+
+.concept__rap{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 150px;
+  justify-content: center;
+}
+
+/*---------------------------------------------------*/
+
+.post {
+  background-color: #f2f2f2;
+}
+
+.post__h3 {
+  font-size: 24px;
+  margin: 60px 0 40px;
+  color: #4e4e4e;
+  text-align: center;
+}
+
+.post__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.post__list__item-img {
+  margin: 40px 0 80px 100px;
+  opacity:0.7;
+}
+
+/*testの一番最初の要素 の中のpost__list-img指定*/
+.post__list__item:first-child .post__list__item-img {
+  margin-left: 0;
+}
+
+.post__list__item:nth-child(4) .post__list__item-img {
+  margin-left: 0;
+}
+
+.post__list__item:nth-child(n+4) .post__list__item-img {
+  margin-top: 0;
+}
+
+.post__textarea__lead {
+  width: 620px;
+  font-size: 20px;
+  margin: 0 90px 70px 0;
+  text-align: center;
+}
+
+.post-button {
+  display: inline-block;
+  font-size: 12px;
+  padding: 14px 20px;
+  background-color: #74cfae;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+}
+
+.post-button:hover {
+  transition: 0.3s;
+  color: #333;
+}
+
+.post__textarea {
+  display: flex;
+  line-height: 30px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.post__list__item-img:hover {
+  transition: 0.3s;
+  opacity:1;
+}
+
+/*---------------------------------------------------*/
+
+.skill-section {
+  background-color: #4e4e4e;
+}
+
+.skill-section__h4 {
+  padding-top: 70px;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+}
+
+.skill__list-img__text {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 10px;
+}
+
+.test2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.test3 {
+  margin: 70px 0 100px 180px;
+}
+
+.test3:first-child {
+  margin-left: 0;
+}
+
+/*---------------------------------------------------*/
+
+.sns {
+  background-color: #f2f2f2;
+}
+
+.sns__button {
+  display: inline-block;
+  font-size: 12px;
+  padding: 40px 20px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  width: 185px;
+  margin: 200px 0;
+  box-sizing:border-box;
+}
+
+.sns__button-color {
+  color: #74cfae;
+}
+
+.sns-inner{
+  display: flex;
+  justify-content: center;
+}
+
+.sns__button:hover {
+  transition: 0.3s;
+  background-color: #fff;
+}
+
+/*---------------------------------------------------*/
+
+.footer{
+  background-color: #74cfae;
+}
+
+.footer__copyright {
+  display: inline-block;
+  color: #fff;
+  margin: 20px 0 25px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: flex-end;
+}
