@@ -17,12 +17,17 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+a {
+  display: inline-block;
+}
+
 /*---------------------------------------------------*/
 
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 0; 
 }
 
 .header {
@@ -33,7 +38,6 @@ body {
 }
 
 .header__icon {
-  padding: 15px 0;
   color: #4e4e4e;
 }
 
@@ -64,7 +68,7 @@ body {
 }
 
 .main-inner {
-  padding: 312px 0 250px;
+  padding: 320px 0 250px;
 }
 
 .main {
@@ -78,7 +82,7 @@ body {
 }
 
 .theme__lead {
-  margin: 20px 0 ;
+  margin-top: 20px;
   color: #c0c0c0;
   font-size: 30px;
 }
@@ -96,12 +100,16 @@ body {
 }
 
 .concept-inner {
-  padding: 50px 0 0 100px;
+  padding: 50px 0 0 0;
 }
 
 .concept__section {
   display: flex;
   height: 345px;
+}
+
+.concept__img {
+  margin-left: 65px;
 }
 
 .concept__h2 {
@@ -112,14 +120,13 @@ body {
 .concept__lead {
   font-size: 20px;
   line-height: 30px;
-  width: 700px;
+  width: 650px;
 }
 
 .concept__rap{
   display: flex;
   flex-flow: column;
-  align-items: center;
-  margin: 150px;
+  margin: 0 0 0 auto;
   justify-content: center;
 }
 
@@ -141,12 +148,12 @@ body {
 .post__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-content: center;
+  padding-top: 40px;
 }
 
 .post__list__item-img {
-  margin: 40px 0 80px 100px;
+  margin: 0 100px 80px 0;
   opacity:0.7;
   transition: 0.3s;
 }
@@ -192,17 +199,11 @@ body {
 }
 
 /*testの一番最初の要素 の中のpost__list-img指定*/
-.post__list__item:first-child .post__list__item-img {
-  margin-left: 0;
+
+.post__list__item:nth-child(3n) .post__list__item-img {
+  margin-right: 0;
 }
 
-.post__list__item:nth-child(4) .post__list__item-img {
-  margin-left: 0;
-}
-
-.post__list__item:nth-child(n+4) .post__list__item-img {
-  margin-top: 0;
-}
 
 /*---------------------------------------------------*/
 
@@ -223,6 +224,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 70px;
 }
 
 .skill__list-img__text {
@@ -233,7 +235,7 @@ body {
 }
 
 .skill-section__area {
-  margin: 70px 0 0 180px;
+  margin: 0 0 0 180px;
 }
 
 .skill-section__area:first-child {
