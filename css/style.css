@@ -1,5 +1,6 @@
 /*親子関係はpadding 兄弟関係はmargin
-  実体参照使うとレイアウト崩れなくなる*/
+  実体参照使うとレイアウト崩れなくなる
+  空白を付けるときは上と左！*/
 
 @charset "UTF-8";
 
@@ -21,13 +22,29 @@ a {
   display: inline-block;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .inner {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .inner {
+    width: 100%;
+  }
+}
+
 /*---------------------------------------------------*/
+
+.main {
+  padding-top: 70px;
+}
 
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0; 
+  padding: 15px 0;
 }
 
 .header {
@@ -41,6 +58,11 @@ a {
   color: #4e4e4e;
 }
 
+.header__contact-button:hover {
+  transition: 0.3s;
+  color: #333;
+}
+
 .header__contact-button {
   display: inline-block;
   font-size: 12px;
@@ -51,9 +73,45 @@ a {
   transition: 0.3s;
 }
 
-.header__contact-button:hover {
-  transition: 0.3s;
-  color: #333;
+@media (max-width: 767px) {
+  .header__contact-button {
+    display: none;
+  }
+
+  .menu {
+  position: relative;
+  height: 40px;
+  width: 50px;
+  border: 2px solid #f2f2f2;
+  border-radius: 10px;
+  }
+
+  .hamburger_line {
+  position: absolute;
+  left: 10px;
+  height: 3px;
+  width: 28px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  }
+
+  .menu,
+  .hamburger_line {
+  display: inline-block;
+  box-sizing: border-box;
+  }
+
+  .hamburger_line1 {
+  bottom: 27px;
+  }
+
+  .hamburger_line2 {
+  bottom: 17px;
+  }
+
+  .hamburger_line3 {
+  bottom: 7px;
+  }
 }
 
 /*---------------------------------------------------*/
@@ -68,7 +126,7 @@ a {
 }
 
 .main-inner {
-  padding: 320px 0 250px;
+  padding: 250px 0;
 }
 
 .main {
@@ -100,7 +158,7 @@ a {
 }
 
 .concept-inner {
-  padding: 50px 0 0 0;
+  padding: 50px 0;
 }
 
 .concept__section {
@@ -114,21 +172,47 @@ a {
 
 .concept__h2 {
   font-size: 24px;
-  margin-bottom: 35px;
 }
 
 .concept__lead {
   font-size: 20px;
   line-height: 30px;
   width: 650px;
+  margin-top: 35px;
 }
 
 .concept__rap{
   display: flex;
   flex-flow: column;
-  margin: 0 0 0 auto;
+  margin-left: auto;
   justify-content: center;
 }
+
+@media (max-width: 1199px) {
+
+  .concept-inner,
+  .concept__section {
+    height: auto;
+  }
+
+  .concept__section {
+    display: inline-block;
+  }
+
+  .concept__img {
+    margin-left: auto;
+  }
+
+  .concept__rap{
+    padding-top: 5%;
+    display: block;
+  }
+
+  .concept__lead {
+    width: auto;
+  }
+}
+
 
 /*---------------------------------------------------*/
 
@@ -145,15 +229,18 @@ a {
   color: #4e4e4e;
 }
 
+.post__list__item {
+  margin: 80px 0 0 100px;
+}
+
 .post__list {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  padding-top: 40px;
+  margin-top: 40px;
 }
 
 .post__list__item-img {
-  margin: 0 100px 80px 0;
   opacity:0.7;
   transition: 0.3s;
 }
@@ -179,7 +266,7 @@ a {
   display: flex;
   line-height: 30px;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 90px;
 }
 
 .post-button,
@@ -198,12 +285,56 @@ a {
   opacity:1;
 }
 
-/*testの一番最初の要素 の中のpost__list-img指定*/
 
-.post__list__item:nth-child(3n) .post__list__item-img {
-  margin-right: 0;
+@media screen and (min-width: 1200px) {
+/*testの一番最初の要素 の中のpost__list-img指定*/
+.post__list__item:nth-child(3n+1) {
+    margin-left: 0;
+  }
+
+.post__list__item:nth-child(-n+3) {
+    margin-top: 0;
+  }
 }
 
+@media screen and (max-width: 1199px) {
+  .post__list {
+    display: block;
+    margin-top: 40px;
+    column-count: 2;
+  }
+
+  .post__list__item {
+    margin: 80px auto 0 auto;
+  }
+
+  .post__textarea__lead {
+    width: 70%;
+    margin: auto;
+    display: block;
+  }
+
+  .post__textarea {
+    display: block;
+  }
+
+  .post-button {
+    width: auto;
+    margin-top: 40px;
+  }
+  .post__textarea,
+  .post__list {
+    text-align: center;
+  }
+
+  .post__list__item-img {
+    width: 100%;
+  }
+
+  .post__list__item:first-child{
+    margin-top: 0;
+  }
+}
 
 /*---------------------------------------------------*/
 
@@ -224,7 +355,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 70px;
+  margin-top: 70px;
 }
 
 .skill__list-img__text {
@@ -235,7 +366,7 @@ a {
 }
 
 .skill-section__area {
-  margin: 0 0 0 180px;
+  margin-left: 180px;
 }
 
 .skill-section__area:first-child {
@@ -245,6 +376,19 @@ a {
 .skill__list-img__text,
 .skill-section__h2 {
   text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .skill-section__list,
+  .skill__list-img__text {
+  display: block;
+  }
+
+.skill-section__area {
+  text-align: center;
+  margin: auto;
+  margin-top: 10%;
+  }
 }
 
 /*---------------------------------------------------*/
@@ -278,6 +422,21 @@ a {
 
 .sns__button-color {
   color: #74cfae;
+}
+
+@media screen and (max-width: 767px) {
+  .sns-inner{
+    padding: 0;
+  }
+  
+  .sns__button {
+    width: auto;
+  }
+
+  .sns__button,
+  .sns-inner {
+    display: block;
+  }
 }
 
 /*---------------------------------------------------*/
