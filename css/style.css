@@ -1,8 +1,8 @@
+@charset "UTF-8";
+
 /*親子関係はpadding 兄弟関係はmargin
   実体参照使うとレイアウト崩れなくなる
   空白を付けるときは上と左！*/
-
-@charset "UTF-8";
 
 body {
   font-family: "Lato", sans-serif;
@@ -22,13 +22,11 @@ a {
   display: inline-block;
 }
 
-@media screen and (max-width: 1199px) {
-  .inner {
-    width: 97%;
-  }
+img {
+  vertical-align: bottom;
 }
 
-/*---------------------------------------------------*/
+/*PC*/
 
 .main {
   padding-top: 70px;
@@ -44,8 +42,10 @@ a {
 .header {
   background-color: #fff;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
 }
 
 .header__icon {
@@ -69,46 +69,6 @@ a {
 
 .sp {
   display: none;
-}
-
-@media screen and (max-width: 767px) {
-  .sp {
-    display: inline-block;
-  }
-
-  .header__contact-button {
-    display: none;
-  }
-
-  .menu {
-    position: relative;
-    height: 20px;
-    border-radius: 4px;
-    padding: 10px;
-  }
-
-  .hamburger_line {
-    position: absolute;
-    right: 20%;
-  }
-
-  .menu,
-  .hamburger_line {
-    border: 1px solid #ddd;
-    width: 25px;
-  }
-
-  .hamburger_line1 {
-  top: 25%;
-  }
-
-  .hamburger_line2 {
-  top: 50%;
-  }
-
-  .hamburger_line3 {
-  top: 75%;
-  }
 }
 
 /*---------------------------------------------------*/
@@ -147,15 +107,6 @@ a {
   text-align: center;
 }
 
-@media screen and (max-width: 767px) {
-  .main-inner {
-    padding: 160px 0 130px;
-  }
-
-  .theme__h1 {
-    font-size: 80px;
-  }
-}
 /*---------------------------------------------------*/
 
 .concept {
@@ -194,29 +145,6 @@ a {
   justify-content: center;
 }
 
-@media screen and (max-width: 1199px) {
-  .concept__section,
-  .concept__rap {
-    display: inline-block;
-  }
-
-  .concept__img {
-    margin-left: auto;
-  }
-
-  .concept__rap{
-    margin-top: 20px;
-  }
-
-  .concept__lead {
-    width: auto;
-  }
-
-  .concept-inner {
-    padding-bottom: 25px;
-  }
-}
-
 
 /*---------------------------------------------------*/
 
@@ -225,7 +153,7 @@ a {
 }
 
 .post-inner {
-  padding: 60px 0 40px;
+  padding: 60px 0 70px;
 }
 
 .post__h2 {
@@ -252,7 +180,6 @@ a {
 .post__textarea__lead {
   width: 580px;
   font-size: 20px;
-  margin: 0 90px 70px 0;
 }
 
 .post-button {
@@ -266,6 +193,7 @@ a {
   transition: 0.3s;
   height: 20px;
   line-height: 20px;
+  margin-left: 90px;
 }
 
 .post__textarea {
@@ -299,57 +227,6 @@ a {
   margin-top: 0;
 }
 
-
-@media screen and (max-width: 1199px) {
-  .post-inner {
-    padding-bottom: 70px;
-  }
-
-  .post__list__item {
-    margin: 0;
-  }
-
-  .post__textarea__lead {
-    margin: auto;
-  }
-
-  .post__textarea {
-    margin-top: 80px;
-  }
-
-  .post__textarea,
-  .post__textarea__lead,
-  .post__list {
-    display: block;
-  }
-
-  .post__list,
-  .button__area {
-    margin-top: 40px;
-  }
-
-  .post__textarea,
-  .post__list {
-    text-align: center;
-  }
-
-  .post__textarea__lead,
-  .post__list__item-img {
-    width: 100%;
-  }
-
-  .post__list__item-img {
-    vertical-align: bottom;
-  }
-
-  .post__list__item:nth-child(3n+1) {
-    margin-top: 80px;
-  }
-
-  .post__list__item:first-child {
-    margin-top: 40px;
-  }
-}
 
 /*---------------------------------------------------*/
 
@@ -393,23 +270,6 @@ a {
   text-align: center;
 }
 
-@media screen and (max-width: 1199px) {
-  .skill-section__list,
-  .skill__list-img__text {
-    display: block;
-  }
-
-  .skill-section__area {
-    text-align: center;
-    margin: auto;
-    margin-top: 88px;
-  }
-
-  .skill-section__area:first-child {
-    margin-top: 0;
-  }
-}
-
 /*---------------------------------------------------*/
 
 .sns {
@@ -443,22 +303,6 @@ a {
   color: #74cfae;
 }
 
-@media screen and (max-width: 767px) {
-  .sns-inner{
-    padding: 50px 15px;
-  }
-
-  .sns__button,
-  .sns-inner {
-    width: auto;
-  }
-
-  .sns__button,
-  .sns-inner {
-    display: block;
-  }
-}
-
 /*---------------------------------------------------*/
 
 .footer{
@@ -474,4 +318,171 @@ a {
 .footer__copyright {
   display: inline-block;
   color: #fff;
+}
+
+/*---------------------------------------------------*/
+
+/*TAB*/
+
+@media screen and (max-width: 1199px) {
+  .inner {
+    width: 97%;
+  }
+
+  .concept__section,
+  .concept__rap {
+    display: inline-block;
+  }
+
+  .concept__img {
+    margin-left: auto;
+  }
+
+  .concept__rap{
+    margin-top: 20px;
+  }
+
+  .concept__lead {
+    width: auto;
+  }
+
+  .concept-inner {
+    padding-bottom: 25px;
+  }
+
+/*---------------------------------------------------*/
+
+  .post-inner {
+    padding-bottom: 70px;
+  }
+
+  .post__list__item {
+    margin: 0;
+  }
+
+  .post__textarea__lead {
+    margin: auto;
+  }
+
+  .post__textarea {
+    margin-top: 80px;
+  }
+
+  .post__textarea,
+  .post__textarea__lead,
+  .post__list {
+    display: block;
+  }
+
+  .post__list,
+  .button__area {
+    margin-top: 40px;
+  }
+
+  .post__textarea,
+  .post__list {
+    text-align: center;
+  }
+
+  .post__textarea__lead,
+  .post__list__item-img {
+    width: 100%;
+  }
+
+  .post-button {
+    margin-left: 0;
+  }
+
+  .post__list__item:nth-child(3n+1) {
+    margin-top: 80px;
+  }
+
+  .post__list__item:first-child {
+    margin-top: 40px;
+  }
+
+/*---------------------------------------------------*/
+
+  .skill-section__list,
+  .skill__list-img__text {
+    display: block;
+  }
+
+  .skill-section__area {
+    text-align: center;
+    margin: auto;
+    margin-top: 88px;
+  }
+
+  .skill-section__area:first-child {
+    margin-top: 0;
+  }
+}
+
+/*SP*/
+
+@media screen and (max-width: 767px) {
+  .sp {
+    display: inline-block;
+  }
+
+  .header__contact-button {
+    display: none;
+  }
+
+  .menu {
+    position: relative;
+    height: 20px;
+    border-radius: 4px;
+    padding: 10px;
+  }
+
+  .hamburger_line {
+    position: absolute;
+    right: 20%;
+  }
+
+  .menu,
+  .hamburger_line {
+    border: 1px solid #ddd;
+    width: 25px;
+  }
+
+  .hamburger_line1 {
+  top: 25%;
+  }
+
+  .hamburger_line2 {
+  top: 50%;
+  }
+
+  .hamburger_line3 {
+  top: 75%;
+  }
+
+/*---------------------------------------------------*/
+
+  .main-inner {
+    padding: 160px 0 130px;
+  }
+
+  .theme__h1 {
+    font-size: 80px;
+  }
+
+/*---------------------------------------------------*/
+
+  .sns-inner{
+    padding: 50px 15px;
+  }
+
+  .sns__button,
+  .sns-inner {
+    width: auto;
+  }
+
+  .sns__button,
+  .sns-inner {
+    display: block;
+  }
 }
