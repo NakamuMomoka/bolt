@@ -24,13 +24,7 @@ a {
 
 @media screen and (max-width: 1199px) {
   .inner {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .inner {
-    width: 100%;
+    width: 97%;
   }
 }
 
@@ -73,7 +67,15 @@ a {
   transition: 0.3s;
 }
 
+.sp {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
+  .sp {
+    display: inline-block;
+  }
+
   .header__contact-button {
     display: none;
   }
@@ -168,7 +170,6 @@ a {
 
 .concept__section {
   display: flex;
-  height: 345px;
 }
 
 .concept__img {
@@ -204,7 +205,7 @@ a {
   }
 
   .concept__rap{
-    padding-top: 20px;
+    margin-top: 20px;
   }
 
   .concept__lead {
@@ -322,6 +323,8 @@ a {
 
   .post-button {
     width: auto;
+    height: 10px;
+    line-height: 10px;
   }
 
   .post__list,
@@ -337,6 +340,10 @@ a {
   .post__textarea__lead,
   .post__list__item-img {
     width: 100%;
+  }
+
+  .post__list__item-img {
+    vertical-align: bottom;
   }
 
   .post__list__item:nth-child(3n+1) {
