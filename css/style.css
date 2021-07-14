@@ -165,7 +165,7 @@ a {
 }
 
 .concept-inner {
-  padding: 50px 0;
+  padding-top: 50px;
 }
 
 .concept__section {
@@ -262,8 +262,10 @@ a {
   background-color: #74cfae;
   color: #fff;
   text-decoration: none;
-  width: 100%;
+  width: 90px;
   transition: 0.3s;
+  height: 20px;
+  line-height: 20px;
 }
 
 .post__textarea {
@@ -319,12 +321,6 @@ a {
   .post__textarea__lead,
   .post__list {
     display: block;
-  }
-
-  .post-button {
-    width: auto;
-    height: 10px;
-    line-height: 10px;
   }
 
   .post__list,
